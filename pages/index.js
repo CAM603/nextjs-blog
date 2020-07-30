@@ -15,14 +15,13 @@ export default function Home({ allPostsData }) {
 				<p>
 					Hello, I'm Cameron. I am a full stack web developer with a
 					passion for learning! See my{" "}
-					{/* <Link href="/posts/first-post">
-						<a>First post</a>
-					</Link> */}
+					<Link href="/pokemon/all">
+						<a>Pokemon</a>
+					</Link>
 				</p>
 				<p>
-					(This is a sample website - you’ll be building a site like
-					this on{" "}
-					<a href="https://nextjs.org/learn">our Next.js tutorial</a>
+					(This is a sample website - I built most of this following{" "}
+					<a href="https://nextjs.org/learn">this Next.js tutorial</a>
 					.)
 				</p>
 			</section>
