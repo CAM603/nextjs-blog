@@ -4,7 +4,6 @@ import Head from "next/head";
 import PokeCard from "../../components/pokeCard/pokeCard";
 
 export default function Poke({ pokemon }) {
-	console.log(pokemon);
 	return (
 		<Layout>
 			<Head>

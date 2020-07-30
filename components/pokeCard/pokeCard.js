@@ -1,7 +1,6 @@
 import styles from "./pokeCard.module.css";
 
 export default function PokeCard({ pokemon }) {
-	console.log(pokemon);
 	return (
 		<div className={styles.container}>
 			<div className={styles.card}>
