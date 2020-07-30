@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { getSortedPostsData } from "../lib/posts";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../components/layout/layout";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import Date from "../components/date";
@@ -13,16 +13,17 @@ export default function Home({ allPostsData }) {
 			</Head>
 			<section className={utilStyles.headingMd}>
 				<p>
-					Hello, I'm Cameron. I am a full stack web developer with a
-					passion for learning! See my{" "}
-					{/* <Link href="/posts/first-post">
-						<a>First post</a>
-					</Link> */}
+					Hello, my name is Cameron.
+					<br />
+					<br />I am a full stack web developer with a passion for
+					learning. I also collect Pokémon, check them out{" "}
+					<Link href="/pokemon/all">
+						<a>here!</a>
+					</Link>
 				</p>
 				<p>
-					(This is a sample website - you’ll be building a site like
-					this on{" "}
-					<a href="https://nextjs.org/learn">our Next.js tutorial</a>
+					(This is a sample website - I built most of it following{" "}
+					<a href="https://nextjs.org/learn">this Next.js tutorial</a>
 					.)
 				</p>
 			</section>
