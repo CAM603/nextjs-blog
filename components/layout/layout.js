@@ -1,10 +1,10 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "Cameron Hawley";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "CamSpace";
 
 export default function Layout({ children, home }) {
 	return (

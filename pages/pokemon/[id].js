@@ -1,24 +1,29 @@
-import Layout from "../../components/layout";
+import Layout from "../../components/layout/layout";
 import fetch from "node-fetch";
 import Head from "next/head";
+import PokeCard from "../../components/pokeCard/pokeCard";
 
-export default function Poke({ post }) {
-	console.log(post);
+export default function Poke({ pokemon }) {
+	console.log(pokemon);
 	return (
 		<Layout>
 			<Head>
-				<title>Poke</title>
+				<title>
+					{pokemon.name.charAt(0).toUpperCase() +
+						pokemon.name.slice(1)}
+				</title>
 			</Head>
+			<PokeCard pokemon={pokemon} />
 		</Layout>
 	);
 }
 
 export async function getStaticPaths() {
 	const res = await fetch(`https://pokeapi.co/api/v2/pokemon`);
-	const pokemon = await res.json();
+	const allPokemon = await res.json();
 
 	// Get the paths we want to pre-render based on posts
-	const paths = pokemon.results.map((_, id) => ({
+	const paths = allPokemon.results.map((_, id) => ({
 		params: { id: id.toString() },
 	}));
 
@@ -32,8 +37,8 @@ export async function getStaticProps({ params }) {
 	// params contains the post `id`.
 	// If the route is like /posts/1, then params.id is 1
 	const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.id}/`);
-	const post = await res.json();
+	const pokemon = await res.json();
 
 	// Pass post data to the page via props
-	return { props: { post } };
+	return { props: { pokemon } };
 }
