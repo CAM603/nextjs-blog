@@ -10,9 +10,9 @@ export default function All({ pokemon }) {
 				<title>My Pokemon</title>
 			</Head>
 			<h1>My Pokemon</h1>
-			{pokemon.results.map((poke) => (
+			{pokemon.results.map((poke, idx) => (
 				<div key={poke.name}>
-					<Link href="/pokemon/[id]" as={`/pokemon/${poke.name}`}>
+					<Link href="/pokemon/[id]" as={`/pokemon/${idx + 1}`}>
 						<a>
 							{poke.name.charAt(0).toUpperCase() +
 								poke.name.slice(1)}
