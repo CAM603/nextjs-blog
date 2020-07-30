@@ -17,7 +17,7 @@ export default function Home({ allPostsData }) {
 					<br />
 					<br />I am a full stack web developer with a passion for
 					learning. I also collect Pokémon, check them out{" "}
-					<Link href="/all/all">
+					<Link href="/pokemon/all">
 						<a>here!</a>
 					</Link>
 				</p>
