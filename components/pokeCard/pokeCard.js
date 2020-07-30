@@ -17,8 +17,8 @@ export default function PokeCard({ pokemon }) {
 					<img src={pokemon.sprites.front_default} />
 				</div>
 				<h3>Moves</h3>
-				{pokemon.moves.slice(0, 5).map((move) => (
-					<p>
+				{pokemon.moves.slice(0, 5).map((move, idx) => (
+					<p key={idx}>
 						{move.move.name.charAt(0).toUpperCase() +
 							move.move.name.slice(1)}
 					</p>
