@@ -9,19 +9,17 @@ export default function All({ pokemon }) {
 			<Head>
 				<title>My Pokemon</title>
 			</Head>
-			<h1>Pokemon I Own:</h1>
-			<ul>
-				{pokemon.results.map((poke) => (
-					<li key={poke.name}>
-						<Link href="/pokemon/[id]" as={`/pokemon/${poke.name}`}>
-							<a>
-								{poke.name.charAt(0).toUpperCase() +
-									poke.name.slice(1)}
-							</a>
-						</Link>
-					</li>
-				))}
-			</ul>
+			<h1>My Pokemon</h1>
+			{pokemon.results.map((poke) => (
+				<div key={poke.name}>
+					<Link href="/pokemon/[id]" as={`/pokemon/${poke.name}`}>
+						<a>
+							{poke.name.charAt(0).toUpperCase() +
+								poke.name.slice(1)}
+						</a>
+					</Link>
+				</div>
+			))}
 		</Layout>
 	);
 }

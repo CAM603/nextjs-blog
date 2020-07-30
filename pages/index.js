@@ -13,14 +13,16 @@ export default function Home({ allPostsData }) {
 			</Head>
 			<section className={utilStyles.headingMd}>
 				<p>
-					Hello, I'm Cameron. I am a full stack web developer with a
-					passion for learning! See my{" "}
+					Hello, my name is Cameron.
+					<br />
+					<br />I am a full stack web developer with a passion for
+					learning. I also collect Pokémon, check them out{" "}
 					<Link href="/pokemon/all">
-						<a>Pokemon</a>
+						<a>here!</a>
 					</Link>
 				</p>
 				<p>
-					(This is a sample website - I built most of this following{" "}
+					(This is a sample website - I built most of it following{" "}
 					<a href="https://nextjs.org/learn">this Next.js tutorial</a>
 					.)
 				</p>
