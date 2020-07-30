@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 
 	// Get the paths we want to pre-render based on posts
 	const paths = allPokemon.results.map((_, idx) => ({
-		params: { id: idx.toString() },
+		params: { id: `${idx + 1}`.toString() },
 	}));
 
 	// We'll pre-render only these paths at build time.
